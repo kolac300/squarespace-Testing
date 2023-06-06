@@ -395,8 +395,9 @@
         }
 
         .main__wrapper__wrapper__inner img {
-            width: 400px;
-            height: 400px;
+            max-width: 400px;
+            max-height: 400px;
+            object-fit: cover;
         }
 
         .main__wrapper__wrapper__inner p {
@@ -1971,7 +1972,7 @@
                     console.log('1', mutation.addedNodes[i] && mutation.addedNodes[i].classList)
                     if (mutation.addedNodes[i] && mutation.addedNodes[i].classList && mutation.addedNodes[i].classList.contains('form-contents')) {
                         let secondCross = mutation.addedNodes[i]
-                    
+
                         secondCross.addEventListener('click', function (e) {
                             // stop watching usin
                             if (e.offsetY + 20 < 0) {
