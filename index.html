@@ -1,0 +1,2081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .header-announcement-bar-wrapper {
+            display: none !important;
+        }
+
+        html *,
+        html,
+        body {
+            font-family: 'IBM Plex Sans', sans-serif, 'Dela Gothic One', 'Poppins' !important;
+            color: white;
+            margin: 0;
+            padding: 0;
+            /* background-color: black; */
+        }
+
+        body {
+            background-color: black;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:wght@200;300;400;600;700;800&family=Poppins:wght@200;300;500;600;700;800&display=swap');
+
+        .header__wrapper,
+        .main__wrapper,
+        .under__main__wrapper,
+        .whyChooseUs__wrapper,
+        .footer__wrapper,
+        .contactUs__wrapper {
+            max-width: 1920px;
+            position: relative;
+            background-color: #000000;
+            margin: auto;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-family: 'IBM Plex Sans';
+            font-weight: 700;
+            font-size: 80px;
+            line-height: 104px;
+            letter-spacing: 0.02em;
+        }
+
+        h2 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 83px;
+            letter-spacing: 0.02em;
+        }
+
+        h3 {
+            Font-size: 40px;
+            Line-height: 100%;
+            Line-height: 52px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 21px;
+            letter-spacing: 0.02em;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        h4 {
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 31px;
+            display: flex;
+            align-items: center;
+
+        }
+
+        h5 {
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 31px;
+
+        }
+
+        .header__heading__logo {
+            height: 80px;
+            color: white;
+            max-width: 1380px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            Font-size: 24px;
+            Line-height: 31px;
+            Line-height: 100%;
+        }
+
+        .header__heading__logo svg {
+            width: 46px;
+            height: 30px;
+        }
+
+
+        @media screen and (max-width:767px) {
+            h1 {
+                font-size: 40px;
+                line-height: 52px;
+                letter-spacing: 0.02em;
+            }
+
+            h2 {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            h3 {
+                Font-size: 20px;
+                Line-height: 100%;
+                Line-height: 32px;
+                font-weight: 700;
+            }
+
+            h4 {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            h5 {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        /*------------------ header section -----------------------------*/
+
+        .arrow__wrapper {
+            position: absolute;
+            top: 178px;
+            right: 1%;
+            z-index: 0;
+            width: 1690px;
+        }
+
+        .arrow__left__wrapper,
+        .arrow__right__wrapper {
+            display: flex;
+            justify-content: end;
+        }
+
+        .arrow__left,
+        .arrow__right {
+            height: 369px;
+            max-width: 1129px;
+        }
+
+        .arrow__right {
+            margin: 0 0 0 auto;
+        }
+
+        .arrow__left {
+            margin: 0 auto 0 0;
+        }
+
+        .header__wrapper__main {
+            position: relative;
+            z-index: 2;
+            max-width: 1048px;
+            margin: auto;
+            margin-top: 181px;
+            text-align: left;
+            padding: 0 32px;
+        }
+
+        .header__wrapper__sub {
+            margin-top: 16px;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 31px;
+            letter-spacing: 0.02em;
+        }
+
+        button {
+            margin-top: 48px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 12px 24px;
+            gap: 10px;
+            width: 191px;
+            height: 48px;
+            background: #00E6A0;
+            border-radius: 8px;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.02em;
+            color: #000000;
+            border: none;
+            margin-bottom: 151px;
+        }
+
+        .swiper-default__main {
+            right: -15%;
+        }
+
+        .swiper-slide {
+            cursor: grab;
+        }
+
+        .swiper-slide__contetn {
+            height: 426px;
+            background: #f8f4f4;
+            border-radius: 24px;
+            background-color: #151515;
+            padding: 40px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        .bottom_slider_text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 31px;
+            letter-spacing: 0.02em;
+        }
+
+        .mobile__arrow__wrapper {
+            display: none;
+            margin: auto;
+        }
+
+        @media screen and (max-width:1650px) {
+            .arrow__wrapper {
+                right: -15%
+            }
+        }
+
+        @media screen and (max-width:1300px) {
+            .arrow__wrapper {
+                right: -35%
+            }
+        }
+
+        @media screen and (max-width:1120px) {
+            .arrow__wrapper {
+                right: -40%
+            }
+
+            .swiper-default__main {
+                left: 36px;
+                right: 0;
+            }
+
+            .arrow__left,
+            .arrow__right {
+                height: 300px;
+
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            .arrow__wrapper {
+                right: -60%
+            }
+        }
+
+        @media screen and (max-width:767px) {
+
+            .header__wrapper__main {
+                margin-top: 28px;
+            }
+
+            br {
+                display: none;
+            }
+
+            .arrow__wrapper {
+                display: none;
+            }
+
+            .mobile__arrow__wrapper {
+                position: relative;
+                display: block;
+                right: 4%;
+                min-height: 289px;
+                width: 541px;
+            }
+
+            .mobile__arrow__wrapper img {
+                width: 541px;
+                min-height: 289px;
+
+            }
+
+
+            .header__wrapper__sub {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            button {
+                justify-content: center;
+                margin: 48px auto 68px auto;
+                padding: 14px 48px;
+                width: 300px;
+                height: 48px;
+                font-weight: 600;
+                box-sizing: border-box;
+            }
+
+            .swiper-slide__contetn {
+                height: 165px;
+                background: #f8f4f4;
+                border-radius: 12px;
+                background-color: #151515;
+                padding: 40px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: left;
+                padding: 12px 16px;
+
+
+            }
+
+            .bottom_slider_text {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0;
+            }
+
+        }
+
+
+
+        /*--------------------------- main section --------------------- */
+
+        .main__wrapper {
+            margin-top: 100px;
+            overflow: hidden;
+        }
+
+        .main__wrapper h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+
+        .main__wrapper__wrapper__inner {
+            max-width: 1380px;
+            margin: auto;
+            display: flex;
+            text-align: left;
+
+        }
+
+        .main__wrapper__wrapper__inner img {
+            width: 400px;
+            height: 400px;
+        }
+
+        .main__wrapper__wrapper__inner p {
+            padding-bottom: 80px;
+
+        }
+
+        .text__images__wrapper {
+            display: flex;
+        }
+
+        .left__hand div,
+        .right__hand div {
+            height: 600px;
+            max-width: 460px;
+            /* padding-bottom: 60px; */
+        }
+
+        .left__hand,
+        .right__hand {
+            padding: 25px 30px;
+        }
+
+        .left__hand {
+            border-right: 1px solid #323232;
+            border-left: 1px solid #323232;
+        }
+
+        .right__han {
+            padding: 25px 30px;
+        }
+
+        hr {
+            margin: 24px 0;
+            height: 0px;
+            border: none;
+            border-bottom: 1px solid #323232;
+        }
+
+        .mobile__main__wrapper__wrapper__inner {
+            display: none;
+
+        }
+
+        .fixed {
+            margin-top: 81px
+        }
+
+        @media screen and (max-width:1200px) {
+            .main__wrapper__wrapper__inner {
+                flex-direction: column;
+                align-items: center;
+            }
+
+        }
+
+        @media screen and (max-width:767px) {
+            .mobile__main__wrapper__wrapper__inner {
+                display: flex;
+                flex-direction: column;
+                padding: 0 24px;
+            }
+
+            .main__wrapper__wrapper__inner {
+                display: none;
+            }
+
+            hr {
+                display: none;
+            }
+
+            .mobile__main__wrapper__wrapper__inner h3 {
+                margin: 24px 0 12px 0;
+            }
+
+        }
+
+
+
+        /*  --------------- under__main__wrapper__inner-------------  */
+
+        .under__main__wrapper {
+            margin-top: 100px;
+        }
+
+        .under__main__wrapper__inner {
+            max-width: 1380px;
+            padding: 64px 40px;
+            margin: auto;
+            background-color: #00261B;
+            border-radius: 24px;
+            position: relative;
+            box-sizing: border-box;
+            max-height: 426px;
+        }
+
+        .img__wrapper {
+            position: absolute;
+            right: 0;
+            top: 0;
+            ;
+        }
+
+        .img__wrapper img {
+            object-fit: cover;
+        }
+
+        .under__main__wrapper__inner h5 {
+            margin: 12px 0 48px 0;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 31px;
+            line-height: 136%;
+            letter-spacing: 0.02em;
+        }
+
+        .under__main__wrapper__inner h5,
+        .under__main__wrapper__inner h3 {
+            position: relative;
+            z-index: 2;
+        }
+
+        .under__main__wrapper__inner button {
+            padding: 24px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .img_mobile {
+            display: none;
+        }
+
+        @media screen and (max-width:767px) {
+            .img_desctop {
+                display: none;
+            }
+
+            .img_mobile {
+                display: inline-block;
+            }
+
+            .under__main__wrapper__inner h3 {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 52px;
+                margin-top: calc(219px - 64px)
+            }
+
+            .under__main__wrapper__inner h5 {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .under__main__wrapper__inner {
+                max-height: 647px;
+            }
+
+
+            .under__main__wrapper__inner button {
+                margin: 48px 0 68px 0;
+                padding: 14px 48px;
+                width: 100%;
+            }
+
+        }
+
+
+        /*----------------  why choose us -------------- */
+        .whyChooseUs__wrapper__inner {
+            max-width: 1380px;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        .whyChooseUs__text__images__wrapper {
+            display: flex;
+            gap: 126px;
+            justify-content: space-between;
+        }
+
+        .whyChooseUs__wrapper__inner h3 {
+            margin-bottom: 48px;
+
+        }
+
+        .whyChooseUs__text__images__wrapper h4 {
+            margin: 24px 0 8px 0;
+        }
+
+        .whyChooseUs__text__images__wrapper div {
+            width: 228px;
+        }
+
+        @media screen and (max-width:1400px) {
+            .whyChooseUs__wrapper__inner {
+                padding: 20px;
+
+            }
+
+            .whyChooseUs__text__images__wrapper {
+                gap: 3%;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .whyChooseUs__text__images__wrapper {
+                flex-direction: column;
+            }
+
+            .whyChooseUs__text__images__wrapper div {
+                width: auto;
+                margin-bottom: 32px;
+            }
+
+
+
+            .whyChooseUs__text__images__wrapper,
+            .whyChooseUs__text__images__wrapper h4 {
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width:530px) {
+
+
+            .whyChooseUs__text__images__wrapper div svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            .whyChooseUs__text__images__wrapper,
+            .whyChooseUs__text__images__wrapper h4 {
+                text-align: left;
+                justify-content: start;
+
+            }
+
+            .whyChooseUs__text__images__wrapper h4 {
+                margin: 12px 0 8px 0;
+            }
+
+
+        }
+
+        /*------- footer section ----------*/
+
+
+        .footer__wrapper__inner,
+        .footer__bottom {
+            max-width: 1380px;
+            margin: auto;
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: center;
+
+            column-gap: 64px;
+        }
+
+        .footer__bottom p {
+            margin: 60px 0;
+            font-family: 'IBM Plex Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: -0.035em;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer__wrapper__inner {
+            display: flex;
+            margin-top: 100px;
+            justify-content: space-between;
+            justify-content: baseline;
+        }
+
+        .footer__wrapper__inner h4 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 136%;
+            margin-top: 24px;
+        }
+
+        .footer__wrapper__inner h3 span {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            display: block;
+        }
+
+        .footer__wrapper__inner h3 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 136%;
+        }
+
+        .social__media__wrapper {
+            padding: 17px 0;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #323232;
+        }
+
+        .social__media__wrapper span {
+            padding-left: 14px;
+            display: inline-block;
+            min-width: 181px;
+        }
+
+        .social__media__wrapper a {
+            text-decoration: none;
+
+        }
+
+        @media screen and (max-width:900px) {
+            .footer__wrapper__inner {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 0 24px;
+            }
+
+            .footer__wrapper__inner span {
+                text-align: left;
+
+            }
+
+            .footer__wrapper__inner h4 {
+                justify-content: center;
+
+            }
+
+            .footer__bottom {
+                flex-wrap: wrap;
+                padding: 0 24px;
+            }
+
+            .footer__bottom p {
+                margin: 24px 0;
+
+            }
+
+            .footer__wrapper__inner {
+                margin-top: 30px;
+            }
+
+        }
+
+        @media screen and (max-width:580px) {
+            .footer__wrapper__inner {
+                text-align: left;
+            }
+
+        }
+
+        @media screen and (max-width:480px) {
+            .social__media__wrapper a {
+                flex: 45%;
+
+            }
+
+            .social__media__wrapper span {
+                min-width: auto;
+                padding-left: 3px;
+            }
+
+            .fixed_bug {
+                position: absolute;
+            }
+
+
+        }
+
+        @media screen and (max-width:440px) {
+            .fixed_bug {
+                position: absolute;
+                white-space: nowrap;
+            }
+
+
+
+
+        }
+
+        /*----------------- contuct us form ----------- */
+
+
+
+        textarea {
+            resize: none !important;
+        }
+    </style>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+
+
+
+    <section class="header__wrapper">
+        <div class="header__heading__logo">
+            <svg width="50" height="31" viewBox="0 0 50 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 33L15 16L30 1H46L31 16H24L7.5 32.5" stroke="white" stroke-width="2.5" />
+                <path d="M12 19L0 31" stroke="white" stroke-width="2.5" />
+            </svg>
+            razer.agency
+        </div>
+
+
+        <div class="mobile__arrow__wrapper">
+            <img src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/9435efa4-839f-4488-b12d-4396348ac2e9/Frame+513426+%281%29.png?content-type=image%2Fpng"
+                alt="">
+        </div>
+        <div class="header__wrapper__main">
+            <main>
+                <h1>Наші послугu – <br>
+                    Ваш ріст</h1>
+                <h5 class="header__wrapper__sub">Ми надаємо комплексне рішення для вашого бізнесу:<br>
+                    Від дизайну та маркетингу до юридичних та фінансових<br> консультацій.</h5>
+            </main>
+
+
+            <button class="contact_btn">
+                Залишити запит
+            </button>
+
+        </div>
+        <div class="arrow__wrapper">
+            <div class="arrow__left"> <img
+                    src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/3405b4ef-b1ca-4f8d-b3c5-6242ebfd4596/Rectangle+3031.png?content-type=image%2Fpng"
+                    alt=""></div>
+            <div class="arrow__right"> <img
+                    src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/82094985-60ed-43f5-b310-c66161bc910f/Rectangle+3032.png?content-type=image%2Fpng"
+                    alt=""> </div>
+        </div>
+        </div>
+        <div class="swiper swiper-default__main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-slide__contetn">
+                        <h2>42+</h2>
+                        <div class="bottom_slider_text">Проектам успішно
+                            надані послуги</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide__contetn">
+                        <h2>120%</h2>
+                        <div class="bottom_slider_text">Ріст органічного трафіку
+                            наших партнерів</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="swiper-slide__contetn">
+                        <h2>8</h2>
+                        <div class="bottom_slider_text">Років досвіду у сфері
+                            інформаційних послуг</div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+
+                    <div class="swiper-slide__contetn">
+                        <h2>1488</h2>
+                        <div class="bottom_slider_text">Кількість унікальних <br>
+                            звернень</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main__wrapper">
+        <div class="main__wrapper__wrapper__inner">
+            <h2>Наші
+                послугu</h2>
+            <div class="text__images__wrapper">
+                <div class="left__hand">
+                    <div>
+                        <h3>Консультація з питань інформатизації <span><svg width="30" height="30" viewBox="0 0 30 30"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                        fill="white" />
+                                </svg></h3>
+                        <hr>
+                        <p>Наші професійні консультанти з радістю нададуть вам експертну допомогу в питаннях
+                            інформатизації. Ми готові відповісти на будь-які питання щодо інформаційних технологій,
+                            веб-ресурсів, програмного забезпечення та безпеки в мережі Інтернет. Наші послуги
+                            забезпечать вам інформаційну підтримку, необхідну для успішного функціонування в
+                            онлайн-середовищі.</p>
+                    </div>
+
+
+
+
+                    <div><img
+                            src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/9bbde0bb-b577-4109-b24f-f9f345e47e1b/computer.png?content-type=image%2Fpng"
+                            alt="">
+                    </div>
+                    <div>
+                        <h3>Веб дизайн <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                        fill="white" />
+                                </svg></h3>
+                        <hr>
+                        <p>Ми розробляємо веб-дизайн для різноманітних сайтів, від простих інформаційних сторінок до
+                            складних інтернет-магазинів. Наші дизайнери знають, як створити візуально привабливий та
+                            зручний для користування дизайн, який допоможе вам залучити більше відвідувачів на ваш сайт
+                            та підвищити конверсію.</p>
+                    </div>
+
+
+                    <div>
+                        <img src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/9e67866a-a62b-4faa-be40-da712f34ebdd/phone.png?content-type=image%2Fpng"
+                            alt="">
+                    </div>
+                    <div>
+                        <h3>Бухгалтерський облік та аудит. Консультація з питань опадаткування <span><svg width="30"
+                                    height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                        fill="white" />
+                                </svg></h3>
+                        <hr>
+                        <p>Наша компанія надає послуги з бухгалтерського обліку та аудиту, а також консультації з питань
+                            опадаткування. Наші професійні бухгалтери та аудитори забезпечують комплексну бухгалтерську
+                            підтримку для вашого бізнесу, включаючи ведення обліку, складання фінансових звітів та інші
+                            бухгалтерські послуги. Ми також пропонуємо послуги з аудиту, які допоможуть забезпечити
+                            надійність та точність ваших фінансових звітів.
+                            Крім того, наші консультанти з податкових питань завжди готові надати професійну
+                            консультацію з опадаткування. Вони знають всі нюанси податкового законодавства та допоможуть
+                            вам забезпечити правильний розрахунок податків та уникнути проблем з податковою службою.
+                        </p>
+                    </div>
+                    <div class="fixed"><img
+                            src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/79ed5fb9-5e48-4d06-b8d3-c87a2a5e8a28/scales.png?content-type=image%2Fpng"
+                            alt="">
+                    </div>
+                    <div>
+                        <h3>Управління нерухомим майном по контракту <span><svg width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                        fill="white" />
+                                </svg></h3>
+                        <hr>
+                        <p>Наша компанія надає послуги з управління нерухомим майном по контракту, щоб забезпечити нашим
+                            клієнтам високоякісне та ефективне управління їхньою власністю. Наші досвідчені фахівці
+                            забезпечують повний спектр послуг, включаючи контроль за утриманням майна, управління
+                            фінансами, координацію ремонтних робіт та багато іншого. Ми розуміємо, що кожна власність
+                            має свої унікальні вимоги та потреби, тому наші послуги управління нерухомим майном
+                            надаються відповідно до індивідуальних потреб наших клієнтів. Зверніться до нас для
+                            отримання кваліфікованої допомоги в управлінні вашою нерухомістю та ми з радістю допоможемо
+                            вам.</p>
+                    </div>
+                </div>
+                <div class="right__hand">
+
+                    <div><img
+                            src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/c991f475-ce8a-4b08-8edb-4fae48b6568c/keyboard.png?content-type=image%2Fpng"
+                            alt="">
+                    </div>
+                    <div>
+                        <h3>Комп’ютерне
+                            програмування <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                        fill="white" />
+                                </svg></h3>
+                        <hr>
+                        <p>Ми надаємо послуги з комп'ютерного програмування, щоб забезпечити вашому бізнесу розвиток та
+                            зростання.
+                            Наші досвідчені програмісти можуть створити для вас програмне забезпечення відповідно до
+                            ваших потреб та вимог. Ми використовуємо сучасні технології програмування, щоб забезпечити
+                            високу якість та ефективність роботи вашого програмного забезпечення. Незалежно від того, чи
+                            потрібен вам веб-додаток, мобільний додаток або спеціалізоване програмне забезпечення, ми з
+                            радістю створимо його для вас.</p>
+                    </div>
+
+                    <div><img
+                            src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/046286ad-51b1-4dfc-927a-54d5dbd78c2e/plan.png?content-type=image%2Fpng"
+                            alt="">
+                    </div>
+                    <div>
+                        <h3>Маркетинг <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                        fill="white" />
+                                </svg></h3>
+                        <hr>
+                        <p>Ми пропонуємо повний спектр маркетингових послуг, включаючи розробку стратегії маркетингу,
+                            рекламу в соціальних мережах, контекстну рекламу, email-маркетинг, SEO-продвижение та інші
+                            послуги. Ми також допоможемо вам аналізувати результати вашої маркетингової кампанії та
+                            вносити необхідні зміни, щоб підвищити її ефективність.</p>
+                    </div>
+
+                    <div><img
+                            src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/35d0909c-10df-4544-93a4-108bcd872065/matrix.png?content-type=image%2Fpng"
+                            alt="">
+                    </div>
+                    <div class="fixed">
+                        <h3>Діяльність у сфері
+                            права <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                        fill="white" />
+                                </svg></h3>
+                        <hr>
+                        <p>Наша компанія займається діяльністю у сфері права і надає різноманітні юридичні послуги для
+                            наших клієнтів. Ми розуміємо, що правові питання можуть бути дуже складними та заплутаними,
+                            тому ми пропонуємо високоякісні та професійні послуги юридичного консультування. Наші
+                            кваліфіковані юристи забезпечують широкий спектр юридичних послуг, включаючи підготовку
+                            договорів, захист прав та інтересів клієнтів в суді, консультації з податкових питань,
+                            нерухомості та бізнесу. Ми завжди стежимо за змінами в законодавстві, щоб забезпечити нашим
+                            клієнтам найкращі юридичні послуги. Зверніться до нас для отримання професійної юридичної
+                            допомоги та ми з радістю допоможемо вам вирішити будь-які юридичні питання.</p>
+                    </div>
+                    <div><img
+                            src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/c852530e-a9f8-47dc-bb8d-fe64368891e8/factor.png?content-type=image%2Fpng"
+                            alt="">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="mobile__main__wrapper__wrapper__inner">
+            <h2>Наші
+                послугu</h2>
+            <div>
+                <h3>Консультація з питань інформатизації <span><svg width="30" height="30" viewBox="0 0 30 30"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                fill="white" />
+                        </svg>
+                    </span></h3>
+                <hr>
+                <p>Наші професійні консультанти з радістю нададуть вам експертну допомогу в питаннях
+                    інформатизації. Ми готові відповісти на будь-які питання щодо інформаційних технологій,
+                    веб-ресурсів, програмного забезпечення та безпеки в мережі Інтернет. Наші послуги
+                    забезпечать вам інформаційну підтримку, необхідну для успішного функціонування в
+                    онлайн-середовищі.</p>
+            </div>
+            <div>
+                <h3>Комп’ютерне
+                    програмування <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                fill="white" />
+                        </svg></h3>
+                <hr>
+                <p>Ми надаємо послуги з комп'ютерного програмування, щоб забезпечити вашому бізнесу розвиток та
+                    зростання.
+                    Наші досвідчені програмісти можуть створити для вас програмне забезпечення відповідно до
+                    ваших потреб та вимог. Ми використовуємо сучасні технології програмування, щоб забезпечити
+                    високу якість та ефективність роботи вашого програмного забезпечення. Незалежно від того, чи
+                    потрібен вам веб-додаток, мобільний додаток або спеціалізоване програмне забезпечення, ми з
+                    радістю створимо його для вас.</p>
+            </div>
+
+            <div>
+                <h3>Веб дизайн<span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                fill="white" />
+                        </svg></h3>
+                <hr>
+                <p>Ми розробляємо веб-дизайн для різноманітних сайтів, від простих інформаційних сторінок до
+                    складних інтернет-магазинів. Наші дизайнери знають, як створити візуально привабливий та
+                    зручний для користування дизайн, який допоможе вам залучити більше відвідувачів на ваш сайт
+                    та підвищити конверсію.</p>
+            </div>
+
+            <div>
+                <h3>Маркетинг <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                fill="white" />
+                        </svg></h3>
+                <hr>
+                <p>Ми пропонуємо повний спектр маркетингових послуг, включаючи розробку стратегії маркетингу,
+                    рекламу в соціальних мережах, контекстну рекламу, email-маркетинг, SEO-продвижение та інші
+                    послуги. Ми також допоможемо вам аналізувати результати вашої маркетингової кампанії та
+                    вносити необхідні зміни, щоб підвищити її ефективність.</p>
+            </div>
+            <div>
+                <h3>Бухгалтерський облік та аудит. Консультація з питань опадаткування <span><svg width="30" height="30"
+                            viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                fill="white" />
+                        </svg></h3>
+                <hr>
+                <p>Наша компанія надає послуги з бухгалтерського обліку та аудиту, а також консультації з питань
+                    опадаткування. Наші професійні бухгалтери та аудитори забезпечують комплексну бухгалтерську
+                    підтримку для вашого бізнесу, включаючи ведення обліку, складання фінансових звітів та інші
+                    бухгалтерські послуги. Ми також пропонуємо послуги з аудиту, які допоможуть забезпечити
+                    надійність та точність ваших фінансових звітів.
+                    Крім того, наші консультанти з податкових питань завжди готові надати професійну
+                    консультацію з опадаткування. Вони знають всі нюанси податкового законодавства та допоможуть
+                    вам забезпечити правильний розрахунок податків та уникнути проблем з податковою службою.
+                </p>
+            </div>
+
+            <div>
+                <h3>Діяльність у сфері
+                    права <span><svg width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                fill="white" />
+                        </svg></h3>
+                <hr>
+                <p>Наша компанія займається діяльністю у сфері права і надає різноманітні юридичні послуги для
+                    наших клієнтів. Ми розуміємо, що правові питання можуть бути дуже складними та заплутаними,
+                    тому ми пропонуємо високоякісні та професійні послуги юридичного консультування. Наші
+                    кваліфіковані юристи забезпечують широкий спектр юридичних послуг, включаючи підготовку
+                    договорів, захист прав та інтересів клієнтів в суді, консультації з податкових питань,
+                    нерухомості та бізнесу. Ми завжди стежимо за змінами в законодавстві, щоб забезпечити нашим
+                    клієнтам найкращі юридичні послуги. Зверніться до нас для отримання професійної юридичної
+                    допомоги та ми з радістю допоможемо вам вирішити будь-які юридичні питання.</p>
+            </div>
+            <div>
+                <h3>Управління нерухомим майном по контракту <span><svg width="30" height="30" viewBox="0 0 30 30"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.5858 7H4.41421V3H26.4142V25H22.4142V9.82843L5.82843 26.4142L3 23.5858L19.5858 7Z"
+                                fill="white" />
+                        </svg> </h3>
+                <hr>
+                <p>Наша компанія надає послуги з управління нерухомим майном по контракту, щоб забезпечити нашим
+                    клієнтам високоякісне та ефективне управління їхньою власністю. Наші досвідчені фахівці
+                    забезпечують повний спектр послуг, включаючи контроль за утриманням майна, управління
+                    фінансами, координацію ремонтних робіт та багато іншого. Ми розуміємо, що кожна власність
+                    має свої унікальні вимоги та потреби, тому наші послуги управління нерухомим майном
+                    надаються відповідно до індивідуальних потреб наших клієнтів. Зверніться до нас для
+                    отримання кваліфікованої допомоги в управлінні вашою нерухомістю та ми з радістю допоможемо
+                    вам.</p>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <section class="under__main__wrapper">
+        <div class="under__main__wrapper__inner">
+            <div>
+                <h3>Побудйте свій діджітал
+                    <br>
+                    досвід разом з нами
+                </h3>
+                <h5>Для початку співпраці із нами, залиште запит через форму.</h5>
+                <button class="contact_btn">Залишити запит</button>
+            </div>
+            <div class="img__wrapper">
+                <img class="img_desctop"
+                    src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/6ae32e73-8e6c-4227-ace1-fc1ef5d520ae/Group+513064.png?content-type=image%2Fpng"
+                    alt="">
+                <img class="img_mobile"
+                    src="https://images.squarespace-cdn.com/content/6479025da21e7f733f866f4d/f2eda80c-94de-47c8-8bf7-2d648c05b583/Group+513064+%281%29.png?content-type=image%2Fpng"
+                    alt="">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="whyChooseUs__wrapper">
+        <div class="whyChooseUs__wrapper__inner">
+
+            <h3>Чому оберають <br>
+                саме нас?
+            </h3>
+
+            <div class="whyChooseUs__text__images__wrapper">
+                <div>
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="80" height="80" rx="20" fill="#00E6A0" />
+                        <path
+                            d="M34.6967 48.8388C32.929 54.1421 25.8579 54.1421 25.8579 54.1421C25.8579 54.1421 25.8579 47.071 31.1612 45.3032"
+                            stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M50.6066 36.4646L40 47.0712L32.929 40.0002L43.5356 29.3936C47.5518 25.3773 51.5681 25.4165 53.2809 25.672C53.5447 25.7113 53.7888 25.8343 53.9773 26.0229C54.1659 26.2114 54.2889 26.4555 54.3282 26.7193C54.5837 28.4321 54.6229 32.4484 50.6066 36.4646Z"
+                            stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M48.8388 38.2324V48.3213C48.8388 48.4854 48.8065 48.648 48.7437 48.7996C48.6809 48.9513 48.5888 49.0891 48.4727 49.2051L43.4193 54.2585C43.2593 54.4185 43.0589 54.5321 42.8395 54.5871C42.62 54.6422 42.3897 54.6366 42.1732 54.571C41.9567 54.5055 41.762 54.3824 41.6099 54.2148C41.4578 54.0473 41.3541 53.8417 41.3097 53.6198L40 47.0713"
+                            stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M41.7677 31.1611H31.6789C31.5147 31.1611 31.3522 31.1935 31.2005 31.2563C31.0489 31.3191 30.9111 31.4112 30.795 31.5272L25.7416 36.5806C25.5816 36.7406 25.4681 36.941 25.413 37.1605C25.358 37.3799 25.3636 37.6102 25.4291 37.8268C25.4947 38.0433 25.6178 38.238 25.7853 38.3901C25.9528 38.5421 26.1585 38.6459 26.3803 38.6903L32.9289 40"
+                            stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <h4>Досвід та профессіоналізм</h4>
+                    <p>Наша агенція має професійних фахівців у галузі цифрового маркетингу, веб-розробки, дизайну та
+                        інших суміжних областей, які можуть надати високоякісні послуги для вашого бізнесу.</p>
+
+                </div>
+                <div>
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="80" height="80" rx="20" fill="#00E6A0" />
+                        <path
+                            d="M40.0001 56.6668C40.0001 56.6668 53.3334 50.0002 53.3334 40.0002V28.3335L40.0001 23.3335L26.6667 28.3335V40.0002C26.6667 50.0002 40.0001 56.6668 40.0001 56.6668Z"
+                            stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M35.6294 38.6948L38.9621 42.3204L45.4651 36.0244" stroke="#1F1F1F" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <h4>Нам довіряють</h4>
+                    <p>Ми маємо широку базу постійних клієнтів, які довіряють нам та рекомендують наші послуги своїм
+                        знайомим та партнерам.
+                        Також ми надаємо повну інформацію про наші послуги та ціноутворення, що допомагає нам
+                        підтримувати довірчі стосунки з нашими клієнтами.</p>
+                </div>
+                <div>
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="80" height="80" rx="20" fill="#00E6A0" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M51.7855 51.7833C46.6919 56.8774 39.1495 57.978 32.9773 55.1235C32.0661 54.7567 31.3191 54.4602 30.6089 54.4602C28.6307 54.4719 26.1685 56.3899 24.8889 55.1118C23.6092 53.832 25.5287 51.3678 25.5287 49.3777C25.5287 48.6675 25.2439 47.9338 24.8771 47.0208C22.0213 40.8495 23.1234 33.3046 28.217 28.2122C34.7192 21.7075 45.2833 21.7075 51.7855 28.2105C58.2995 34.7252 58.2877 45.2803 51.7855 51.7833Z"
+                            stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M46.5656 40.6883H46.5806" stroke="#1F1F1F" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M39.8837 40.6883H39.8987" stroke="#1F1F1F" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M33.2023 40.6883H33.2173" stroke="#1F1F1F" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+
+                    <h4>Повний цикл підтримки</h4>
+                    <p>Ми можемо забезпечити вас постійною підтримкою та консультаціями, коли вам це потрібно. Це може
+                        включати допомогу з проблемами сайту, оптимізацією пошукової видачі, налаштуванням контекстної
+                        реклами і т.д.</p>
+                </div>
+                <div>
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="80" height="80" rx="20" fill="#00E6A0" />
+                        <path d="M44.375 35.625H35.625V44.375H44.375V35.625Z" stroke="#1F1F1F" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                            d="M51.25 27.5H28.75C28.0596 27.5 27.5 28.0596 27.5 28.75V51.25C27.5 51.9404 28.0596 52.5 28.75 52.5H51.25C51.9404 52.5 52.5 51.9404 52.5 51.25V28.75C52.5 28.0596 51.9404 27.5 51.25 27.5Z"
+                            stroke="#1F1F1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M52.5 36.25H56.25" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M52.5 43.75H56.25" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M23.75 36.25H27.5" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M23.75 43.75H27.5" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M43.75 52.5V56.25" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M36.25 52.5V56.25" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M43.75 23.75V27.5" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M36.25 23.75V27.5" stroke="#1F1F1F" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+
+                    <h4>Інновації</h4>
+                    <p>Ми допоможемо вам залишатися попереду конкурентів, надаючи новітні та інноваційні методи
+                        маркетингу та просування вашого бізнесу. Це може включати використання нових технологій,
+                        створення ефективних стратегій просування і т.д.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer__wrapper">
+
+
+        <div class="footer__wrapper__inner">
+            <div style="flex:45%">
+                <h2>Контакти для <br>
+                    зв’язку</h2>
+                <h4>Бажаєте отримати відповідь максимально швидко?<br>
+                    Телефонуйте та пишіть:</h4>
+            </div>
+
+            <div style="flex:45%">
+                <h3>Рейзер Іванович
+                    <span>CEO</span>
+                </h3>
+
+
+                <div class="social__media__wrapper">
+
+
+                    <a href=""><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.6975 9.41086C6.8654 7.15929 10.3115 5.67491 12.0357 4.95774C16.9588 2.91006 17.9818 2.55435 18.6486 2.54261C18.7952 2.54002 19.1231 2.57637 19.3355 2.74871C19.5148 2.89423 19.5642 3.09082 19.5878 3.22879C19.6114 3.36676 19.6408 3.68107 19.6174 3.92666C19.3507 6.72978 18.1963 13.5322 17.609 16.6718C17.3605 18.0002 16.8712 18.4456 16.3975 18.4892C15.368 18.584 14.5863 17.8089 13.5892 17.1553C12.029 16.1325 11.1475 15.4959 9.63306 14.4978C7.88281 13.3444 9.01742 12.7105 10.0149 11.6745C10.2759 11.4034 14.8118 7.2777 14.8996 6.90343C14.9105 6.85662 14.9207 6.68215 14.8171 6.59001C14.7134 6.49788 14.5604 6.52939 14.45 6.55445C14.2936 6.58996 11.801 8.23742 6.97251 11.4968C6.26502 11.9826 5.6242 12.2193 5.05004 12.2069C4.41708 12.1933 3.19952 11.849 2.29439 11.5548C1.1842 11.1939 0.301855 11.0031 0.378687 10.3903C0.418707 10.071 0.85831 9.74457 1.6975 9.41086Z"
+                                fill="white" />
+                        </svg><span>Telegram</span>
+                    </a>
+
+                    <a href=""> <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.3883 6.85338e-05C9.94649 6.85338e-05 9.58824 0.358183 9.58824 0.800023C9.58824 1.24186 9.94649 1.59998 10.3883 1.59998H13.269L6.63473 8.23426C6.32228 8.54659 6.32228 9.05311 6.63473 9.36555C6.94719 9.678 7.45371 9.67801 7.76602 9.36555L14.4003 2.73127V5.61195C14.4003 6.05379 14.7584 6.41191 15.2003 6.41191C15.6421 6.41191 16.0002 6.05379 16.0002 5.61195V0.799954C16.0002 0.358114 15.6421 0 15.2003 0L10.3883 6.85338e-05Z"
+                                fill="white" />
+                            <path
+                                d="M1.59991 4.80039C1.59991 4.35855 1.95816 4.0003 2.4 4.0003H7.46674C7.90858 4.0003 8.2667 3.64218 8.2667 3.20034C8.2667 2.7585 7.90858 2.40039 7.46674 2.40039H2.4C1.07451 2.40039 0 3.47491 0 4.80039V13.6002C0 14.9258 1.07451 16.0002 2.4 16.0002H11.1998C12.5254 16.0002 13.5998 14.9258 13.5998 13.6002V9.00965C13.5998 8.56781 13.2417 8.20956 12.7998 8.20956C12.358 8.20956 11.9999 8.56781 11.9999 9.00965V13.6002C11.9999 14.042 11.6416 14.4003 11.1998 14.4003H2.4C1.95816 14.4003 1.59991 14.042 1.59991 13.6002V4.80039Z"
+                                fill="white" />
+                        </svg>
+                        <span>@razer</span>
+                    </a>
+
+
+
+                </div>
+
+
+
+
+
+                <div class="social__media__wrapper">
+
+
+
+                    <a href=""><svg width="18" height="16" viewBox="0 0 18 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.1162 0.5C14.2337 0.5 15.3087 0.941667 16.0995 1.73417C16.8912 2.525 17.3337 3.59167 17.3337 4.70833V11.2917C17.3337 13.6167 15.442 15.5 13.1162 15.5H4.88366C2.55783 15.5 0.666992 13.6167 0.666992 11.2917V4.70833C0.666992 2.38333 2.54949 0.5 4.88366 0.5H13.1162ZM14.442 5.95L14.5087 5.88333C14.7078 5.64167 14.7078 5.29167 14.4995 5.05C14.3837 4.92583 14.2245 4.85 14.0587 4.83333C13.8837 4.82417 13.717 4.88333 13.5912 5L9.83366 8C9.35033 8.40083 8.65783 8.40083 8.16699 8L4.41699 5C4.15783 4.80833 3.79949 4.83333 3.58366 5.05833C3.35866 5.28333 3.33366 5.64167 3.52449 5.89167L3.63366 6L7.42533 8.95833C7.89199 9.325 8.45783 9.525 9.05033 9.525C9.64116 9.525 10.217 9.325 10.6828 8.95833L14.442 5.95Z"
+                                fill="white" />
+                        </svg>
+                        <span>Email</span>
+                    </a>
+
+                    <a href=""><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.94531 0.566406C11.5078 0.566406 12.9141 0.796875 14.1641 1.25781C15.4141 1.71094 16.4375 2.33594 17.2344 3.13281C18.0391 3.92969 18.6523 4.85156 19.0742 5.89844C19.4961 6.9375 19.707 8.05859 19.707 9.26172C19.707 11.0742 19.375 12.4961 18.7109 13.5273C18.0469 14.5508 17.1328 15.0625 15.9688 15.0625C14.6719 15.0625 13.7422 14.6055 13.1797 13.6914C12.7891 14.1445 12.2656 14.5117 11.6094 14.793C10.9609 15.0664 10.2852 15.2031 9.58203 15.2031C8.26172 15.2031 7.14062 14.7109 6.21875 13.7266C5.29688 12.7422 4.83594 11.5391 4.83594 10.1172C4.83594 8.70312 5.29688 7.50781 6.21875 6.53125C7.14062 5.54688 8.26172 5.05469 9.58203 5.05469C10.082 5.05469 10.6016 5.16406 11.1406 5.38281C11.6797 5.59375 12.1445 5.86719 12.5352 6.20312V5.24219H14.3633V10.7148C14.3633 11.6758 14.4961 12.3672 14.7617 12.7891C15.0352 13.2031 15.4609 13.4102 16.0391 13.4102C16.6562 13.4102 17.1445 13.0352 17.5039 12.2852C17.8711 11.5352 18.0547 10.5273 18.0547 9.26172C18.0547 8.54297 17.9531 7.84766 17.75 7.17578C17.5547 6.50391 17.2422 5.86719 16.8125 5.26562C16.3828 4.66406 15.8555 4.14062 15.2305 3.69531C14.6055 3.25 13.8398 2.89844 12.9336 2.64062C12.0273 2.375 11.0312 2.24219 9.94531 2.24219C8.42969 2.24219 7.05469 2.59375 5.82031 3.29688C4.59375 3.99219 3.62891 4.95312 2.92578 6.17969C2.23047 7.40625 1.88281 8.76953 1.88281 10.2695C1.88281 11.3633 2.07812 12.3945 2.46875 13.3633C2.86719 14.3242 3.41016 15.1484 4.09766 15.8359C4.78516 16.5234 5.60938 17.0664 6.57031 17.4648C7.53906 17.8633 8.57422 18.0625 9.67578 18.0625C10.4102 18.0625 11.1602 17.9531 11.9258 17.7344C12.6992 17.5156 13.3359 17.2266 13.8359 16.8672L14.7969 18.2617C14.25 18.6914 13.5 19.0391 12.5469 19.3047C11.5938 19.5781 10.6367 19.7148 9.67578 19.7148C8.34766 19.7148 7.09375 19.4727 5.91406 18.9883C4.74219 18.5039 3.73828 17.8438 2.90234 17.0078C2.06641 16.1797 1.40625 15.1797 0.921875 14.0078C0.4375 12.8359 0.195312 11.5898 0.195312 10.2695C0.195312 8.91016 0.441406 7.63281 0.933594 6.4375C1.43359 5.23438 2.11328 4.20312 2.97266 3.34375C3.83203 2.48438 4.86719 1.80859 6.07812 1.31641C7.28906 0.816406 8.57812 0.566406 9.94531 0.566406ZM9.82812 13.4336C10.3906 13.4336 10.9258 13.3125 11.4336 13.0703C11.9492 12.8203 12.3477 12.5078 12.6289 12.1328C12.5664 11.75 12.5352 11.2773 12.5352 10.7148V8.10156C12.2695 7.73438 11.8828 7.43359 11.375 7.19922C10.8672 6.95703 10.3516 6.83594 9.82812 6.83594C8.92188 6.83594 8.15625 7.15234 7.53125 7.78516C6.91406 8.41797 6.60547 9.19531 6.60547 10.1172C6.60547 11.0391 6.91797 11.8242 7.54297 12.4727C8.17578 13.1133 8.9375 13.4336 9.82812 13.4336Z"
+                                fill="white" />
+                        </svg>
+                        <span>rezer@agancy.io</span></a>
+
+
+
+                </div>
+
+                <div class="social__media__wrapper">
+                    <a href=""><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.2969 3.49609L14.2168 1.41797C14.0701 1.27059 13.8957 1.15366 13.7036 1.07389C13.5115 0.994115 13.3056 0.953075 13.0977 0.953125C12.6738 0.953125 12.2754 1.11914 11.9766 1.41797L9.73828 3.65625C9.59091 3.80298 9.47397 3.97738 9.3942 4.16944C9.31443 4.3615 9.27339 4.56743 9.27344 4.77539C9.27344 5.19922 9.43945 5.59766 9.73828 5.89648L11.375 7.5332C10.9919 8.37766 10.4592 9.14587 9.80273 9.80078C9.14789 10.4589 8.37974 10.9935 7.53516 11.3789L5.89844 9.74219C5.75171 9.59481 5.5773 9.47788 5.38525 9.39811C5.19319 9.31833 4.98726 9.27729 4.7793 9.27734C4.35547 9.27734 3.95703 9.44336 3.6582 9.74219L1.41797 11.9785C1.27041 12.1255 1.15338 12.3002 1.0736 12.4926C0.993827 12.685 0.952883 12.8913 0.953126 13.0996C0.953126 13.5234 1.11914 13.9219 1.41797 14.2207L3.49414 16.2969C3.9707 16.7754 4.62891 17.0469 5.30469 17.0469C5.44727 17.0469 5.58399 17.0352 5.71875 17.0117C8.35156 16.5781 10.9629 15.1777 13.0703 13.0723C15.1758 10.9688 16.5742 8.35938 17.0137 5.71875C17.1465 4.91211 16.8789 4.08203 16.2969 3.49609Z"
+                                fill="white" />
+                        </svg>
+
+                        <span>Телефон</span>
+                    </a>
+
+
+                    <a href="">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.3883 6.85338e-05C9.94649 6.85338e-05 9.58824 0.358183 9.58824 0.800023C9.58824 1.24186 9.94649 1.59998 10.3883 1.59998H13.269L6.63473 8.23426C6.32228 8.54659 6.32228 9.05311 6.63473 9.36555C6.94719 9.678 7.45371 9.67801 7.76602 9.36555L14.4003 2.73127V5.61195C14.4003 6.05379 14.7584 6.41191 15.2003 6.41191C15.6421 6.41191 16.0002 6.05379 16.0002 5.61195V0.799954C16.0002 0.358114 15.6421 0 15.2003 0L10.3883 6.85338e-05Z"
+                                fill="white" />
+                            <path
+                                d="M1.59991 4.80039C1.59991 4.35855 1.95816 4.0003 2.4 4.0003H7.46674C7.90858 4.0003 8.2667 3.64218 8.2667 3.20034C8.2667 2.7585 7.90858 2.40039 7.46674 2.40039H2.4C1.07451 2.40039 0 3.47491 0 4.80039V13.6002C0 14.9258 1.07451 16.0002 2.4 16.0002H11.1998C12.5254 16.0002 13.5998 14.9258 13.5998 13.6002V9.00965C13.5998 8.56781 13.2417 8.20956 12.7998 8.20956C12.358 8.20956 11.9999 8.56781 11.9999 9.00965V13.6002C11.9999 14.042 11.6416 14.4003 11.1998 14.4003H2.4C1.95816 14.4003 1.59991 14.042 1.59991 13.6002V4.80039Z"
+                                fill="white" />
+                        </svg>
+                        <span class="fixed_bug">+380(99) 1264 25 25</span></a>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2023 Razer.Agency All rights reserved</p>
+            <p>Privacy</p>
+            <p>Terms&Conditions</p>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .contactUs__popUp {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.484);
+            position: fixed;
+            z-index: 10;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        label {
+            display: block;
+        }
+
+        .contactUs__inner__wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            max-width: 672px;
+            max-height: 573px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            background-color: black;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 52px rgba(0, 230, 160, 0.4);
+        }
+
+        .contactUs__inner__wrapper h3 {
+            background: rgba(19, 19, 19, 0.68);
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+
+        }
+
+        .contactUs__inner__wrapper h3 span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+
+
+
+        form {
+            /* display: flex;    */
+            flex-wrap: wrap;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        form label {
+            width: 100%;
+            max-width: 592px;
+
+        }
+
+        form input {
+            width: 100%;
+            max-width: 592px;
+            height: 44px;
+        }
+
+        form label textarea {
+            width: 100%;
+            max-width: 592px;
+            height: 121px;
+
+        }
+
+        .inner__form__wrapper {
+            width: 100%;
+            height: 100%;
+            max-width: 592px;
+            display: flex;
+            gap: 8px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+
+
+        }
+
+        input,
+        textarea {
+            border: none;
+            margin: 8px auto 16px auto !important;
+            border-radius: 12px !important;
+            background-color: #131313AD;
+            padding: 12px 14px !important;
+            box-sizing: border-box !important;
+        }
+
+        #submit__form {
+            background-color: #202020;
+        }
+
+        /* aaaaaaaaaaaaaa1111111111111111111111111111111111111111111111111111111111111111111a */
+
+        .fluid-engine.fe-647902cee96084727879d1a0 {
+            position: fixed;
+            overflow: visible;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            background-color: rgba(255, 255, 255, 0.484);
+            display: none;
+        }
+
+        .fe-block.fe-block-5cbb2ee3a214c78937d2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            width: 672px;
+            max-height: 573px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            background-color: black;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 52px rgba(0, 230, 160, 0.4);
+        }
+
+        .sqs-block.form-block.sqs-block-form.sqs-background-enabled {
+            padding: 0 !important;
+        }
+
+        .fe-block.fe-block-5cbb2ee3a214c78937d2 input:focus,
+        .fe-block.fe-block-5cbb2ee3a214c78937d2 textarea:focus {
+            outline: none;
+        }
+
+        .fe-block.fe-block-5cbb2ee3a214c78937d2 input,
+        .fe-block.fe-block-5cbb2ee3a214c78937d2 textarea {
+            border: none;
+            margin: 8px auto 16px auto;
+            border-radius: 12px;
+            background-color: #131313AD;
+            padding: 12px 14px;
+            box-sizing: border-box;
+        }
+
+        .fe-block.fe-block-5cbb2ee3a214c78937d2 form input {
+            width: 100%;
+            max-width: 592px;
+            height: 44px;
+        }
+
+        .fe-block.fe-block-5cbb2ee3a214c78937d2 form textarea {
+            width: 100%;
+            max-width: 592px;
+            height: 121px;
+
+        }
+
+        .form-item.field {
+            padding: 0 !important;
+            margin: 0 !important;
+            flex: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .form-item.field input,
+        .form-item.field textarea {
+            color: white !important;
+            font-family: 'IBM Plex Sans', sans-serif, 'Dela Gothic One', 'Poppins' !important;
+        }
+
+        #text-f8aa510f-0f7c-4a26-baf3-b6dc466d95b6 {
+            flex: 49%;
+        }
+
+        #email-yui_3_17_2_1_1656615088309_7772 {
+            flex: 49%;
+            margin: 0;
+            margin-left: 8px !important;
+        }
+
+        .field-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .mkTKK6Se1WSWC0Psa20C {
+            background-color: black !important;
+            color: rgb(255, 255, 255);
+            column-gap: 10px;
+            font-size: 10px !important;
+            font-weight: 400 !important;
+            padding: 0 !important;
+        }
+
+        .mkTKK6Se1WSWC0Psa20C svg {
+            height: 10px !important;
+        }
+
+        .field-list div.title p.mkTKK6Se1WSWC0Psa20C {
+            display: none !important;
+        }
+
+
+
+        input[type=submit] {
+            margin-top: 32px !important;
+        }
+
+        @media screen and (max-width:767px) {
+            .fe-block.fe-block-5cbb2ee3a214c78937d2 {
+                width: auto;
+                min-width: 375px;
+
+            }
+
+            #email-yui_3_17_2_1_1656615088309_7772 {
+                margin: 0 !important;
+            }
+
+            #text-f8aa510f-0f7c-4a26-baf3-b6dc466d95b6,
+            #email-yui_3_17_2_1_1656615088309_7772 {
+                flex: 100%;
+            }
+
+            #siteWrapper.site-wrapper .sqs-button-element--primary {
+                margin-top: 85px !important;
+
+            }
+
+            .fe-block.fe-block-5cbb2ee3a214c78937d2 {
+                max-height: 752px;
+                border-radius: 0;
+            }
+
+            .contactUs__inner__wrapper {
+                max-height: 752px;
+                border-radius: 0;
+
+            }
+
+            #submit__form {
+                margin-top: 134px !important;
+            }
+
+            .form-item.field.email.required::after {
+                top: -226px !important;
+            }
+
+        }
+
+        @media screen and (max-width:550px) {
+            .inner__form__wrapper {
+                display: block;
+            }
+
+            .fe-block.fe-block-5cbb2ee3a214c78937d2 {
+                max-height: 752px;
+                border-radius: 0;
+            }
+
+            .contactUs__inner__wrapper {
+                max-height: 752px;
+                border-radius: 0;
+
+            }
+
+            #submit__form {
+                margin-top: 134px !important;
+            }
+        }
+
+        #siteWrapper {
+            height: 0px !important;
+            max-height: 0px !important;
+            min-height: 0px !important;
+        }
+
+        #siteWrapper.site-wrapper .sqs-button-element--primary {
+            padding: 0 !important;
+            background-color: #202020;
+        }
+
+        .form-item.field.text:first-child::after {
+            content: "X";
+            top: 0;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            cursor: pointer;
+            right: -20px;
+            top: -20px;
+        }
+
+
+        .form-item.field {}
+
+        /* 
+        .form-item.field.email.required::after {
+            content: "X";
+            top: -124px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            cursor: pointer;
+        } */
+
+        .form-wrapper {
+            width: 100%;
+            position: absolute;
+        }
+
+        .form-wrapper .form-submission-text p {
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .form-contents::after {
+            content: "X";
+            font-size: 18px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            cursor: pointer;
+            right: 20px;
+            top: 20px;
+        }
+
+
+        /* #page {
+            display: none;
+        }
+
+        #siteWrapper {
+            display: none;
+        } */
+    </style>
+
+
+    <section style="display: none;" class="contactUs__wrapper contactUs__popUp pop_up">
+        <div class="contactUs__inner__wrapper">
+            <h3>Запит<span class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="12" fill="#202020" />
+                        <path d="M7.75732 7.7572L16.2426 16.2425" stroke="#8C8C8C" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M16.2432 7.75732L7.75788 16.2426" stroke="#8C8C8C" stroke-width="1.5"
+                            stroke-linecap="round" />
+                    </svg>
+                </span></h3>
+            <form class="react-form-contents" autocomplete="on" novalidate data-success-redirect id="contact-form">
+
+                <label for="user_name"> Ім’я <br>
+                    <input name="user_name" placeholder="Як до вас звератись" type="text" na id="user_name" required>
+                </label>
+
+                <div class="inner__form__wrapper">
+
+                    <label for="phone">Телефон <br>
+                        <input name="phone" id="phone" placeholder="+380" type="email">
+                    </label>
+
+                    <label for="email">Email <br>
+                        <input name="email" id="email" placeholder="Ваш email" type="text">
+                    </label>
+
+                </div>
+
+                <label for="message"> Повідомлення <br>
+                    <textarea id="message" placeholder="Опишіть стисло тему вашого запиту чи питання." name="message"
+                        cols="30" rows="10"></textarea>
+                </label>
+
+                <input class="submit-btn" id='submit__form' type="submit" value="Відправити запит">
+
+            </form>
+
+
+        </div>
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script defer>
+
+
+
+
+        // let observer = new MutationObserver((mutations) => {
+        //     mutations.forEach((mutation) => {
+        //         if (!mutation.addedNodes) return
+
+        //         for (let i = 0; i < mutation.addedNodes.length; i++) {
+
+        //             if (mutation.addedNodes[i] && mutation.addedNodes[i].classList && mutation.addedNodes[i].classList.contains('fe-block-5cbb2ee3a214c78937d2')) {
+
+        //                 mutation.addedNodes[i].innerHTML += `<h3>Запит<span class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+        //          xmlns="http://www.w3.org/2000/svg">
+        //        <circle cx="12" cy="12" r="12" fill="#202020" />
+        //         <path d="M7.75732 7.7572L16.2426 16.2425" stroke="#8C8C8C" stroke-width="1.5"
+        //            stroke-linecap="round" />
+        //        <path d="M16.2432 7.75732L7.75788 16.2426" stroke="#8C8C8C" stroke-width="1.5"
+        //             stroke-linecap="round" />
+        //   </svg>
+        // </span></h3>`
+        //                 //                     mutation.addedNodes[i].innerHTML = (`<h3>Запит<span class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+        //                 //              xmlns="http://www.w3.org/2000/svg">
+        //                 //            <circle cx="12" cy="12" r="12" fill="#202020" />
+        //                 //             <path d="M7.75732 7.7572L16.2426 16.2425" stroke="#8C8C8C" stroke-width="1.5"
+        //                 //                stroke-linecap="round" />
+        //                 //            <path d="M16.2432 7.75732L7.75788 16.2426" stroke="#8C8C8C" stroke-width="1.5"
+        //                 //                 stroke-linecap="round" />
+        //                 //      </svg>
+        //                 //    </span></h3>` + mutation.addedNodes[i].innerHTML)
+        //             }
+
+        //             // do things to your newly added nodes here
+        //             let node = mutation.addedNodes[i]
+        //         }
+        //     })
+        // })
+
+        // observer.observe(document.body, {
+        //     childList: true
+        //     , subtree: true
+        //     , attributes: false
+        //     , characterData: false
+        // })
+
+        // // stop watching using:
+        // // observer.disconnect()
+
+
+        // // waitForElm('.fe-block.fe-block-5cbb2ee3a214c78937d2').then((elm) => {
+        // //     console.log('Element is ready');
+
+        // //     console.log(elm.innerHTML = (`<h3>Запит<span class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+        // //                 xmlns="http://www.w3.org/2000/svg">
+        // //                 <circle cx="12" cy="12" r="12" fill="#202020" />
+        // //                 <path d="M7.75732 7.7572L16.2426 16.2425" stroke="#8C8C8C" stroke-width="1.5"
+        // //                     stroke-linecap="round" />
+        // //                 <path d="M16.2432 7.75732L7.75788 16.2426" stroke="#8C8C8C" stroke-width="1.5"
+        // //                     stroke-linecap="round" />
+        // //             </svg>
+        // //         </span></h3>` + pop_upBlock.innerHTML));
+        // // });
+
+        // //         document.addEventListener("DOMContentLoaded", (event) => {
+
+
+        // //             const pop_upBlock = document.querySelectorAll(".fe-block.fe-block-5cbb2ee3a214c78937d2")
+
+        // // console.log('first',  pop_upBlock.innerHTML)
+
+        // // pop_upBlock.innerHTML = (`<h3>Запит<span class="close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+        // //                 xmlns="http://www.w3.org/2000/svg">
+        // //                 <circle cx="12" cy="12" r="12" fill="#202020" />
+        // //                 <path d="M7.75732 7.7572L16.2426 16.2425" stroke="#8C8C8C" stroke-width="1.5"
+        // //                     stroke-linecap="round" />
+        // //                 <path d="M16.2432 7.75732L7.75788 16.2426" stroke="#8C8C8C" stroke-width="1.5"
+        // //                     stroke-linecap="round" />
+        // //             </svg>
+        // //         </span></h3>` + pop_upBlock.innerHTML)
+
+        // //         console.log('second',  pop_upBlock.innerHTML)
+        // //         })
+
+
+
+
+
+
+        let pop_ups = document.querySelectorAll(".fluid-engine.fe-647902cee96084727879d1a0")
+        const crossesc = document.querySelectorAll('.close')
+        const readMoreList = document.querySelectorAll(".contact_btn")
+
+        const contactForm = document.querySelector('#contact-form');
+        const submitBtn = document.querySelector('.submit-btn')
+        const inputUser_name = document.querySelector('#user_name')
+        const inputPhone = document.querySelector('#phone')
+        const inputEmail = document.querySelector('#email')
+        const inputMessage = document.querySelector('#message')
+
+        const service_ID = 'service_d6n53st'
+        const templateID = 'template_319wo78'
+        const publicKey = "JVPib77Y8ygK_SM5E"
+
+
+
+        // emailjs.init(publicKey)
+
+        // contactForm.addEventListener('submit', (e) => {
+        //     e.preventDefault()
+        //     submitBtn.value = "Загружаемо...";
+
+
+
+        //     if (inputUser_name.value.trim() && inputEmail.value.trim() && inputPhone.value.trim()) {
+        //         const inputFields = {
+        //             user_name: inputUser_name.value,
+        //             email: inputEmail.value,
+        //             phone: inputPhone.value,
+        //             message: inputMessage.value
+        //         }
+        //         emailjs.send(service_ID, templateID, inputFields).then(() => {
+        //             inputUser_name.value = ""
+        //             inputEmail.value = ""
+        //             inputPhone.value = ""
+        //             inputMessage.value = ""
+
+        //             submitBtn.value = "Відправлено успішно"
+        //             pop_ups.forEach(el => el.style.cssText = 'visibility: hidden; z-index: 0;')
+
+
+        //         }, error => {
+        //             console.log('error', error)
+        //             submitBtn.value = "Ой, щось не так"
+        //         })
+        //     }
+        //     else {
+        //         submitBtn.value = 'Заповніть усі поля'
+
+        //     }
+
+        // })
+
+        document.addEventListener('keydown', (event) => {
+            const key = event.key;
+            if (key === "Escape") {
+                console.log('first', pop_ups)
+                pop_ups.forEach(el => {
+                    el.style.display = 'none'
+                })
+            }
+        });
+
+
+
+        let observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (!mutation.addedNodes) return
+                for (let i = 0; i < mutation.addedNodes.length; i++) {
+                    console.log('1', mutation.addedNodes[i] && mutation.addedNodes[i].classList)
+                    if (mutation.addedNodes[i] && mutation.addedNodes[i].classList && mutation.addedNodes[i].classList.contains('form-contents')) {
+                        let secondCross = mutation.addedNodes[i]
+                    
+                        secondCross.addEventListener('click', function (e) {
+                            // stop watching usin
+                            if (e.offsetY + 20 < 0) {
+                                pop_ups.forEach(el => {
+                                    el.style.display = 'none'
+                                })
+                                observer.disconnect()
+                            }
+
+                        });
+                    }
+                }
+            })
+        })
+
+
+
+
+
+        // crossesc.forEach(el => {
+        //     el.addEventListener('click', () => {
+        //         el.closest(".pop_up").style.cssText = 'visibility: hidden; z-index: 0;'
+        //     })
+        // });
+
+
+        readMoreList.forEach(readMoreListEl => {
+            readMoreListEl.addEventListener('click', () => {
+                pop_ups = document.querySelectorAll(".fluid-engine.fe-647902cee96084727879d1a0")
+                pop_ups.forEach(el => {
+                    el.style.display = 'block'
+
+
+                    observer.observe(document, {
+                        childList: true
+                        , subtree: true
+                        , attributes: false
+                        , characterData: false
+                    })
+
+
+                    el.addEventListener('click', (e) => {
+                        if (e.target.classList && e.target.classList.contains('fe-647902cee96084727879d1a0')) {
+                            e.target.style.display = 'none'
+                        }
+                    })
+
+                })
+
+                let cross = document.querySelector('.field-list').firstChild;
+                cross.addEventListener('click', function (e) {
+                    if (e.offsetX > cross.offsetWidth) {
+                        pop_ups.forEach(el => {
+                            el.style.display = 'none'
+                        })
+                    }
+                });
+
+
+                // pop_ups.forEach(el => {
+                //     el.addEventListener('click', (e) => {
+                //         if (e.target.classList && e.target.classList.contains('fe-647902cee96084727879d1a0')) {
+                //             e.target.style.display = 'none'
+                //         }
+                //     })
+                // });
+            })
+
+        });
+
+
+        const mainSwiper = new Swiper(".swiper-default__main", {
+            loop: true,
+            spaceBetween: 8,
+            // loopAdditionalSlides: 24,
+            width: 700,
+            slidesPerView: 4,
+            autoplay: {
+                delay: 3000,
+            },
+            breakpoints: {
+
+
+                767: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                    width: 1772,
+                },
+                // when window width is >= 480px
+                1730: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                    width: 1772,
+                },
+            },
+        }
+
+        )
+    </script>
+
+
+
+
+
+</body>
+
+</html>
